@@ -1,0 +1,19 @@
+{
+	"name": "backend",
+	"version": "0.0.1",
+	"type": "module",
+	"private": true,
+	"scripts": {
+		"dev": "bunx -b convex dev",
+		"clean": "rm -rf node_modules/.cache dist",
+		"nuke": "bun run clean && rm -rf node_modules",
+		"codegen": "bunx -b convex codegen",
+		"env": "bunx -b convex env",
+		"deploy": "bunx -b convex deploy",
+		"dashboard": "bunx -b convex dashboard",
+		"typecheck": "bunx -b tsc --noEmit"
+	},
+	"dependencies": {
+		"convex": "^1.36.0"
+	}
+}

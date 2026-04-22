@@ -1,0 +1,13 @@
+{
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"compilerOptions": {
+		"paths": {
+			"@/*": ["./src/*"],
+			"@backend/*": ["../backend/*"],
+			"@convex": ["./src/lib/convex.ts"]
+		}
+	},
+	"extends": "astro/tsconfigs/strict",
+	"include": [".astro/types.d.ts", "**/*"],
+	"exclude": ["dist"]
+}

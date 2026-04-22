@@ -1,0 +1,25 @@
+{
+	"name": "dev-diary-blog",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "bunx -b astro dev",
+		"clean": "rm -rf node_modules/.cache dist .astro",
+		"nuke": "bun run clean && rm -rf node_modules",
+		"build": "astro build",
+		"preview": "astro preview",
+		"check": "astro check",
+		"typecheck": "bunx -b tsc --noEmit",
+		"astro": "astro"
+	},
+	"dependencies": {
+		"@astrojs/starlight": "^0.38.3",
+		"astro": "^6.0.1",
+		"sharp": "^0.34.2"
+	},
+	"devDependencies": {
+		"@types/bun": "^1.3.12",
+		"convex": "^1.37.0",
+		"convex-helpers": "^0.1.115"
+	}
+}

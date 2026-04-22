@@ -1,0 +1,14 @@
+{
+	"name": "convex-explore",
+	"type": "module",
+	"version": "0.0.1",
+	"private": true,
+	"workspaces":["backend/", "dev-diary-blog/"],
+	"scripts": {
+		"dev": "bun run --workspaces dev",
+		"clean": "bun run --workspaces clean && rm -rf node_modules/.cache",
+		"nuke": "bun run --workspaces nuke && rm -rf node_modules bun.lock",
+		"reinstall": "bun run nuke && bun install",
+		"typecheck": "bun run --workspaces typecheck"
+	}
+}
