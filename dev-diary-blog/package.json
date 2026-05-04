@@ -6,11 +6,11 @@
 		"dev": "bunx -b astro dev",
 		"clean": "rm -rf node_modules/.cache dist .astro",
 		"nuke": "bun run clean && rm -rf node_modules",
-		"build": "astro build",
 		"preview": "astro preview",
 		"check": "astro check",
 		"typecheck": "bunx -b tsc --noEmit",
-		"astro": "astro"
+		"astro": "astro",
+		"build": "bunx -b convex-helpers ts-api-spec --url $CONVEX_URL --prod && mv convexApi*.ts src/lib/convexApi.ts && astro build"
 	},
 	"dependencies": {
 		"@astrojs/starlight": "^0.38.3",

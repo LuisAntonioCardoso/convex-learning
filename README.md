@@ -28,4 +28,5 @@ The backend is a convex instance where I do all the implementation, exploration 
 	- tsconfigs defines @convex as path to convex.ts, frontend files 'import {api} form "@convex"
 	- CI just needs to gen and import the convexApi.js file using the convex-helpers on the respective convex repo
 	- in CI, with convex-helpers package, run 'bunx convex-helpers ts-api-spec --prod && mv convexApi*.ts src/lib/convexApi.ts'
+	- since vercel has it's pipeline that runs build, there is where I'm going to add the 'CI command'
 - added .env.local and .env.example
