@@ -19,7 +19,6 @@ The backend is a convex instance where I do all the implementation, exploration 
 	- "dev": run dev
 	- "clean": clear cache
 	- "nuke": clear node modules
-	- "reinstall": clear and instal again node modules
 	- "typecheck": run typecheck
 	- other project specific ones in the respective package.json
 - astro repo is using starlight for the doc style site and started with the starlight template
