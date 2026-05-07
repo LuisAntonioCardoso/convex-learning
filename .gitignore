@@ -19,6 +19,7 @@ report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
 .env
 .env.development.local
 .env.test.local
+.env.preview.local
 .env.production.local
 .env.local
 
@@ -34,3 +35,5 @@ report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
 .DS_Store
 
 PLAN.md
+DEPLOYMENT*.md
+convexApi.ts

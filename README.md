@@ -25,7 +25,10 @@ The backend is a convex instance where I do all the implementation, exploration 
 - Convex - Astro integration:
 	- created convex.ts file that imports api based on the current env and exports it 
 	- tsconfigs defines @convex as path to convex.ts, frontend files 'import {api} form "@convex"
-	- CI just needs to gen and import the convexApi.js file using the convex-helpers on the respective convex repo
-	- in CI, with convex-helpers package, run 'bunx convex-helpers ts-api-spec --prod && mv convexApi*.ts src/lib/convexApi.ts'
-	- since vercel has it's pipeline that runs build, there is where I'm going to add the 'CI command'
-- added .env.local and .env.example
+	- convex.ts has logic to choose where the import comes from (diff dev from prod)
+- CI/deployment
+	- defined a 'build' command in the frontend that goes to the backend, deploys, uses convex-helper ts-api-spec to gen the frontend API directly to <UI>/src/lib/convexApi.ts and finish with astro build
+	- this build command should only run in the host (vercel)
+	- Convex dash > settings > general > deploy keys > create (gen prod/preview API key) that needs to be passed to the host (needed because of convex deploy)
+- added .env for local, prod.local, and .env.example
+- I will add the DX of preview deployments later

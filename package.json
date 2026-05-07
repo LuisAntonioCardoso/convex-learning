@@ -3,7 +3,7 @@
 	"type": "module",
 	"version": "0.0.1",
 	"private": true,
-	"workspaces":["backend/", "dev-diary-blog/"],
+	"workspaces":["backend/", "web/"],
 	"scripts": {
 		"dev": "bun run --workspaces dev",
 		"clean": "bun run --workspaces clean && rm -rf node_modules/.cache",
