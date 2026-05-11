@@ -10,7 +10,7 @@
 		"check": "astro check",
 		"typecheck": "bunx -b tsc --noEmit",
 		"astro": "astro",
-		"build": "cd ../backend && bunx convex deploy && bunx convex-helpers ts-api-spec --output-file ../dev-diary-blog/src/lib/convexApi.ts && cd ../dev-diary-blog && bunx -b astro build"
+		"build": "cd ../backend && bunx convex deploy && bunx convex-helpers ts-api-spec --output-file ../web/src/lib/convexApi.ts && cd ../web && bunx -b astro build"
 	},
 	"dependencies": {
 		"@astrojs/starlight": "^0.38.3",
